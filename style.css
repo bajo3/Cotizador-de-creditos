@@ -112,6 +112,7 @@ body {
 
    /* Estilos para el footer */
    footer {
+    text-align: center;
     background-color: #222;
     color: #eee;
     display: flex;
@@ -119,6 +120,7 @@ body {
     padding: 20px;
     position: fixed;
     bottom: 0;
+    right: 0;
     width: 100%;
   }
 
