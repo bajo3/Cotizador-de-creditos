@@ -42,7 +42,9 @@ window.addEventListener('load', function () {
         const edadAuto = new Date().getFullYear() - anoAuto;
         let tasaInteres;
 
-        if (edadAuto >= 0 && edadAuto <= 10) {
+        if (edadAuto > 1 && edadAuto <= 10) {
+            tasaInteres = 0.77;
+        }else if (edadAuto > 0 && edadAuto <= 10) {
             tasaInteres = 0.8;
         } else if (edadAuto > 10 && edadAuto <= 20) {
             tasaInteres = 0.88;
