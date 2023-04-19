@@ -59,7 +59,7 @@ body {
     margin-left: 20px;
   }
   
-  input[type="text"],
+  input[type="number"],
   select {
     background-color: #333;
     border: none;
@@ -71,14 +71,14 @@ body {
     padding: 10px;
   }
   
-  input[type="text"] {
+  input[type="number"] {
     background-color: #1d1d1f;
     border: 2px solid transparent;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     transition: all 0.3s ease-in-out;
   }
   
-  input[type="text"]:hover {
+  input[type="number"]:hover {
     background-color: #343434;
     border: 2px solid #61dafb;
     transform: scale(1.1);
