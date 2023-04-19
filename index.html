@@ -1,28 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
+    <header>
+        <img src="img/LOGO NEGRO.png" alt="" srcset="">
+    </header>
+
+    <div class="loader"></div>
     <div class="contenedor">
         <h1>Cotizador de crédito para autos</h1>
-    
+
         <form>
             <div class="input-group">
                 <label for="valor-auto">Valor del automóvil:</label>
                 <input type="text" id="valor-auto" name="valor-auto" class="required">
             </div>
-    
+
             <div class="input-group">
                 <label>Año del auto</label>
                 <input type="text" id="ano-auto" placeholder="Ingrese el año del auto" class="required" />
 
             </div>
-    
+
             <div class="input-group">
                 <label for="cuotas">Cuotas:</label>
                 <select id="cuotas" name="cuotas">
@@ -32,15 +40,25 @@
                     <option value="36">36 cuotas</option>
                 </select>
             </div>
-    
+
             <button type="button" id="cotizar">Cotizar</button>
         </form>
-    
+
         <div id="resultado"></div>
     </div>
-    
-    
-    
-      <script src="app..js"></script>
+
+    <footer>
+        <div class="footer-content">
+            <h3>Felipe Lentini Developer</h3>
+        </div>
+        <div class="footer-social">
+            <a href="https://www.linkedin.com/in/felipelentini/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://github.com/felipelentinic" target="_blank"><i class="fab fa-github"></i></a>
+        </div>
+    </footer>
+
+
+    <script src="app..js"></script>
 </body>
+
 </html>

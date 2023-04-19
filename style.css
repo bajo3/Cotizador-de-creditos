@@ -2,45 +2,84 @@ body {
     background-color: #222;
     color: #eee;
     font-family: Arial, sans-serif;
-}
+  }
 
-.contenedor {
-    max-width: 500px;
+  header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background-color: #222;
+  }
+
+  header img{
+    width: 20%;
+    height: auto;
+  }
+  
+  .contenedor {
     margin: 0 auto;
+    max-width: 500px;
     text-align: center;
-}
-
-h1 {
+  }
+  
+  form {
     margin-top: 50px;
-}
-
-form {
+  }
+  
+  h1 {
     margin-top: 50px;
-}
-
-.input-group {
+  }
+  
+  .input-group {
     display: flex;
     flex-direction: column;
     margin-bottom: 20px;
-}
-
-
-input[type="text"],
-select {
-    padding: 10px;
+  }
+  
+  .input-group .required {
+    border: 2px solid red;
+    color: red;
+  }
+  
+  label {
+    color: #fff;
+    display: block;
+    font-size: 18px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+  }
+  
+  label input[type="number"] {
+    margin-left: 20px;
+  }
+  
+  input[type="text"],
+  select {
+    background-color: #333;
     border: none;
     border-radius: 5px;
-    background-color: #333;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.3);
     color: #eee;
     font-size: 18px;
-    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.3);
     outline: none;
-}
-
-
-
-/* Estilos para el botón */
-button {
+    padding: 10px;
+  }
+  
+  input[type="text"] {
+    background-color: #1d1d1f;
+    border: 2px solid transparent;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    transition: all 0.3s ease-in-out;
+  }
+  
+  input[type="text"]:hover {
+    background-color: #343434;
+    border: 2px solid #61dafb;
+    transform: scale(1.1);
+  }
+  
+  button {
     background-color: #61dafb;
     border: none;
     border-radius: 10px;
@@ -53,68 +92,140 @@ button {
     text-transform: uppercase;
     transition: all 0.2s ease;
     width: 150px;
-}
-
-button:hover {
+  }
+  
+  button:hover {
     background-color: #fff;
-    color: #61dafb;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
-}
-
-/* Estilos para los labels */
-label {
+    color: #61dafb;
+  }
+  
+  #resultado {
     color: #fff;
-    display: block;
-    font-size: 18px;
-    margin-bottom: 10px;
-    text-transform: uppercase;
-}
-
-label input[type="number"] {
-    margin-left: 20px;
-}
-
-
-#resultado {
-    margin-top: 50px;
     font-size: 24px;
-    color: #fff;
-}
+    margin-top: 50px;
+  }
+  
+  .hide {
+    display: none;
+  }
 
+   /* Estilos para el footer */
+   footer {
+    background-color: #222;
+    color: #eee;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
 
-/* Efecto de sombra */
-input[type="text"] {
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-}
+  /* Estilos para el contenido del footer */
+  .footer-content h3 {
+    margin: 0;
+  }
 
-/* Efecto de animación */
-input[type="text"] {
-    transition: all 0.3s ease-in-out;
-}
+  /* Estilos para los iconos sociales del footer */
+  .footer-social a {
+    color: #eee;
+    font-size: 24px;
+    margin-left: 20px;
+  }
 
-input[type="text"]:hover {
-    transform: scale(1.1);
-}
+  /* Estilos para los iconos sociales al pasar el mouse por encima */
+  .footer-social a:hover {
+    color: #61dafb;
+    transition: color 0.2s ease;
+  }
+  
+  .loader {
+    animation: spin 2s linear infinite;
+    border: 16px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 16px solid #3498db;
+    height: 120px;
+    left: 0;
+    margin: auto;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 120px;
+  }
+  
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
 
-/* Efecto de borde */
-input[type="text"] {
-    border: 2px solid transparent;
-}
+  
 
-input[type="text"]:hover {
-    border: 2px solid #61dafb;
-}
+/* Estilos para dispositivos móviles y celulares */
+@media screen and (max-width: 767px) {
 
-/* Efecto de fondo */
-input[type="text"] {
-    background-color: #1d1d1f;
-}
-
-input[type="text"]:hover {
-    background-color: #343434;
-}
-
-input.required {
-    border: 2px solid red;
+    /* Ajustar tamaño del logo */
+    header img {
+      width: 50%;
+    }
+  
+    /* Ajustar margen del contenedor */
+    .contenedor {
+      max-width: 100%;
+      margin: 0;
+    }
+  
+    /* Ajustar margen del formulario */
+    form {
+      margin-top: 30px;
+    }
+  
+    /* Ajustar ancho del botón */
+    button {
+      width: 100%;
+    }
+  
+    /* Ajustar margen del resultado */
+    #resultado {
+      margin-top: 30px;
+    }
+  
+    /* Ajustar margen del título */
+    h1 {
+      margin-top: 30px;
+      font-size: 28px;
+    }
+  
+    /* Ajustar margen de los inputs */
+    .input-group {
+      margin-bottom: 15px;
+    }
+  
+    /* Ajustar tamaño de fuente de los inputs */
+    input[type="text"],
+    select {
+      font-size: 16px;
+    }
+  
+    /* Ajustar tamaño de fuente del botón */
+    button {
+      font-size: 16px;
+      height: 40px;
+    }
+  
+    /* Ajustar tamaño de fuente de los labels */
+    label {
+      font-size: 16px;
+    }
+  
+    /* Ajustar tamaño de fuente del resultado */
+    #resultado {
+      font-size: 20px;
+    }
+  
   }
   
