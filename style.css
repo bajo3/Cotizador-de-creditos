@@ -182,7 +182,7 @@ body {
   
     /* Ajustar margen del contenedor */
     .contenedor {
-      max-width: 100%;
+      max-width: 90%;
       margin: 0;
     }
   
