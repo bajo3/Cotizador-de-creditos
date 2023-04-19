@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="contenedor">
+        <h1>Cotizador de crédito para autos</h1>
+    
+        <form>
+            <div class="input-group">
+                <label for="valor-auto">Valor del automóvil:</label>
+                <input type="text" id="valor-auto" name="valor-auto" class="required">
+            </div>
+    
+            <div class="input-group">
+                <label>Año del auto</label>
+                <input type="text" id="ano-auto" placeholder="Ingrese el año del auto" class="required" />
+
+            </div>
+    
+            <div class="input-group">
+                <label for="cuotas">Cuotas:</label>
+                <select id="cuotas" name="cuotas">
+                    <option value="12">12 cuotas</option>
+                    <option value="18">18 cuotas</option>
+                    <option value="24">24 cuotas</option>
+                    <option value="36">36 cuotas</option>
+                </select>
+            </div>
+    
+            <button type="button" id="cotizar">Cotizar</button>
+        </form>
+    
+        <div id="resultado"></div>
+    </div>
+    
+    
+    
+      <script src="app..js"></script>
+</body>
+</html>

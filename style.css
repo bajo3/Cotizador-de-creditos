@@ -1,0 +1,120 @@
+body {
+    background-color: #222;
+    color: #eee;
+    font-family: Arial, sans-serif;
+}
+
+.contenedor {
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+h1 {
+    margin-top: 50px;
+}
+
+form {
+    margin-top: 50px;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+
+input[type="text"],
+select {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #333;
+    color: #eee;
+    font-size: 18px;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.3);
+    outline: none;
+}
+
+
+
+/* Estilos para el botón */
+button {
+    background-color: #61dafb;
+    border: none;
+    border-radius: 10px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 18px;
+    height: 50px;
+    margin-top: 20px;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    transition: all 0.2s ease;
+    width: 150px;
+}
+
+button:hover {
+    background-color: #fff;
+    color: #61dafb;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+/* Estilos para los labels */
+label {
+    color: #fff;
+    display: block;
+    font-size: 18px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+label input[type="number"] {
+    margin-left: 20px;
+}
+
+
+#resultado {
+    margin-top: 50px;
+    font-size: 24px;
+    color: #fff;
+}
+
+
+/* Efecto de sombra */
+input[type="text"] {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Efecto de animación */
+input[type="text"] {
+    transition: all 0.3s ease-in-out;
+}
+
+input[type="text"]:hover {
+    transform: scale(1.1);
+}
+
+/* Efecto de borde */
+input[type="text"] {
+    border: 2px solid transparent;
+}
+
+input[type="text"]:hover {
+    border: 2px solid #61dafb;
+}
+
+/* Efecto de fondo */
+input[type="text"] {
+    background-color: #1d1d1f;
+}
+
+input[type="text"]:hover {
+    background-color: #343434;
+}
+
+input.required {
+    border: 2px solid red;
+  }
+  
