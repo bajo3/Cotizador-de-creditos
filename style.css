@@ -129,6 +129,22 @@ body {
     width: 100%;
   }
 
+  #tabla-prestamos {
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  #tabla-prestamos th,
+  #tabla-prestamos td {
+    padding: 10px;
+    border: 1px solid #ccc;
+  }
+  
+  #tabla-prestamos th {
+    background-color: #eee;
+  }
+  
+
   /* Estilos para el contenido del footer */
   .footer-content h3 {
     margin: 0;

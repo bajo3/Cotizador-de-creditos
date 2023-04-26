@@ -10,6 +10,7 @@
         integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style.css">
+    <script src="https://api.bluelytics.com.ar/v2/latest"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/3.3.4/jquery.inputmask.bundle.min.js"></script>
 
@@ -20,7 +21,7 @@
     <header>
         <img src="img/LOGO NEGRO.png" alt="" srcset="">
     </header>
-
+<main>
     <div class="loader"></div>
     <div class="contenedor">
         <h1>Cotizador de crédito para autos</h1>
@@ -48,9 +49,35 @@
             </div>
 
             <button type="button" id="cotizar">Cotizar</button>
-        </form>
+            <button type="button" id="valor-dolar">Dolar</button>
+            <button id="borrar-datos">Borrar</button>
 
-        <div id="resultado"></div>
+        </form>
+    </main>
+    <section class="dolar">
+        <table id="dolar-table">
+            <thead>
+              <tr>
+                <th>Moneda</th>
+                <th>Compra</th>
+                <th>Venta</th>
+              </tr>
+            </thead>
+            <tbody>
+            </tbody>
+          </table>
+    </section>
+
+            <div id="resultado"></div>
+
+            <table id="tabla-prestamos"></table>
+
+            
+        
+        
+
+    
+          
     </div>
 
     <footer>
@@ -65,7 +92,7 @@
 
     </footer>
 
-
+<script src="Api-dolar.js"></script>
     <script src="app..js"></script>
 </body>
 
