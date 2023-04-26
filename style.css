@@ -7,7 +7,9 @@ body {
     background-color: #222;
     color: #eee;
     font-family: Arial, sans-serif;
+    display: none;
   }
+  
 
   header{
     display: flex;
@@ -20,8 +22,62 @@ body {
   header img{
     width: 20%;
     height: auto;
+    position: relative;
   }
+
+  /*Tabla dolar*/
+  .dolar{
+    position: absolute;
+    right: 5%;
+  }
+
+  /* Estilos para la tabla */
+#dolar-table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-bottom: 20px;
+  font-size: 16px;
+  margin-left: auto;
+}
+
+#dolar-table th,
+#dolar-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+}
+
+#dolar-table th {
   
+  font-weight: bold;
+}
+
+
+
+#dolar-table tbody tr:hover {
+  background-color: #070707;
+}
+
+/* Estilos para la columna de Moneda */
+#dolar-table tbody td:first-child {
+  font-weight: bold;
+}
+
+/* Estilos para la columna de Compra */
+#dolar-table tbody td:nth-child(2) {
+  color: green;
+}
+
+/* Estilos para la columna de Venta */
+#dolar-table tbody td:nth-child(3) {
+  color: red;
+}
+/*Fin*/
+  
+  main {
+    display: flex;
+  }
+
   .contenedor {
     margin: 0 auto;
     max-width: 500px;
@@ -132,6 +188,9 @@ body {
   #tabla-prestamos {
     border-collapse: collapse;
     margin-top: 20px;
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: center;
   }
   
   #tabla-prestamos th,

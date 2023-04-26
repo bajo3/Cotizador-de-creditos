@@ -11,7 +11,7 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style.css">
     <script src="https://api.bluelytics.com.ar/v2/latest"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/3.3.4/jquery.inputmask.bundle.min.js"></script>
 
 
@@ -20,6 +20,19 @@
 <body>
     <header>
         <img src="img/LOGO NEGRO.png" alt="" srcset="">
+        <div class="dolar">
+            <table id="dolar-table">
+                <thead>
+                  <tr>
+                    <th>Moneda</th>
+                    <th>Compra</th>
+                    <th>Venta</th>
+                  </tr>
+                </thead>
+                <tbody>
+                </tbody>
+              </table>
+            </div>
     </header>
 <main>
     <div class="loader"></div>
@@ -28,7 +41,7 @@
 
         <form>
             <div class="input-group">
-                <label for="valor-auto">Valor del automóvil:</label>
+                <label for="valor-auto">Prestamo:</label>
                 <input type="number" id="valor-auto" name="valor-auto" class="required">
             </div>
 
@@ -53,26 +66,15 @@
             <button id="borrar-datos">Borrar</button>
 
         </form>
-    </main>
-    <section class="dolar">
-        <table id="dolar-table">
-            <thead>
-              <tr>
-                <th>Moneda</th>
-                <th>Compra</th>
-                <th>Venta</th>
-              </tr>
-            </thead>
-            <tbody>
-            </tbody>
-          </table>
-    </section>
 
-            <div id="resultado"></div>
+        <div id="resultado"></div>
+    </main>
+
+<div class="resultados">
+            
 
             <table id="tabla-prestamos"></table>
-
-            
+        </div>
         
         
 
@@ -91,7 +93,7 @@
         </div>
 
     </footer>
-
+<script src="animate.js"></script>
 <script src="Api-dolar.js"></script>
     <script src="app..js"></script>
 </body>
