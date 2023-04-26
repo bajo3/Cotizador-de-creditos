@@ -1,11 +1,18 @@
-$(document).ready(function() {
-
+$(document).ready(function () {
     // Ocultar la animación de carga
     var loader = $('.loader');
     loader.addClass('hide');
 
-    
+    // Esperar 2 segundos y mostrar el body con un efecto fadein
+    $("body").fadeOut(0);
+    $("body").fadeIn(4000);
 
+    //Rotacion de imagen
+    $("img").animate({
+        rotate: "+=360deg"
+    }, 2000, "linear", function () {
+        $(this).css("rotate", "0deg");
+    });
 
     // Cargar la tabla de préstamos desde el localStorage, si existe
     const tablaPrestamosString = localStorage.getItem("tablaPrestamos");
@@ -29,9 +36,6 @@ $(document).ready(function() {
             // Obtener el valor actual del input
             const valor = parseFloat($(this).val().replace(/,/g, '.'));
 
-         
-        
-
             // Verificar si el valor es válido
             if (!isNaN(valor)) {
                 // Convertir el valor a formato de moneda con separador de miles
@@ -40,6 +44,8 @@ $(document).ready(function() {
                 // Actualizar el valor del input con el valor convertido
                 $(this).val(valorConPuntos);
             }
+
+
 
             // Obtener la tabla de préstamos
             const tablaPrestamos = $("#tabla-prestamos");
@@ -74,56 +80,53 @@ $(document).ready(function() {
             $("#ano-auto").removeClass("required");
         }
 
+        // Calcular la edad del auto y la tasa de interés correspondiente
+        const edadAuto = new Date().getFullYear() - anoAuto;
+        let tasaInteres;
 
-            // Calcular la edad del auto y la tasa de interés correspondiente
-            const edadAuto = new Date().getFullYear() - anoAuto;
-            let tasaInteres;
+        if (edadAuto > 1 && edadAuto <= 10) {
+            tasaInteres = 0.77;
+        } else if (edadAuto > 0 && edadAuto <= 10) {
+            tasaInteres = 0.8;
+        } else if (edadAuto > 10 && edadAuto <= 20) {
+            tasaInteres = 0.88;
+        } else if (edadAuto > 20) {
+            tasaInteres = 0.95;
+        }
 
-            if (edadAuto > 1 && edadAuto <= 10) {
-                tasaInteres = 0.77;
-            } else if (edadAuto > 0 && edadAuto <= 10) {
-                tasaInteres = 0.8;
-            } else if (edadAuto > 10 && edadAuto <= 20) {
-                tasaInteres = 0.88;
-            } else if (edadAuto > 20) {
-                tasaInteres = 0.95;
-            }
+        // Obtener el número de cuotas
+        const cuotas = parseInt(document.getElementById("cuotas").value);
 
-            // Obtener el número de cuotas
-            const cuotas = parseInt(document.getElementById("cuotas").value);
+        // Calcular el valor de cada cuota
+        const valorCuota = (valorAuto * tasaInteres) / cuotas;
+        // Formatear el valor con comas para mostrarlo en el HTML
+        const valorCuotaConComas = valorCuota.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,');
 
-            // Calcular el valor de cada cuota
-            const valorCuota = (valorAuto * tasaInteres) / cuotas;
-            // Formatear el valor con comas para mostrarlo en el HTML
-            const valorCuotaConComas = valorCuota.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,');
-
-            // Mostrar el resultado en el HTML
-            document.getElementById("resultado").innerHTML = `El valor de la cuota es: ${valorCuotaConComas}`;
-        });
-
-        // Resaltar en rojo los campos que faltan llenar
-        document.getElementById("valor-auto").addEventListener("blur", function () {
-            if (this.value === '') {
-                this.classList.add("required");
-            } else {
-                this.classList.remove("required");
-            }
-        });
-
-        document.getElementById("ano-auto").addEventListener("blur", function () {
-            if (this.value === '') {
-                this.classList.add("required");
-            } else {
-                this.classList.remove("required");
-            }
-        });
-        $("#borrar-datos").on("click", function() {
-            localStorage.removeItem("tablaPrestamos");
-            // Elimina la tabla de préstamos en la página
-            $("#tabla-prestamos").html("");
-          });
-
-      
-
+        // Mostrar el resultado en el HTML
+        document.getElementById("resultado").innerHTML = `El valor de la cuota es: ${valorCuotaConComas}`;
     });
-    
+
+    // Resaltar en rojo los campos que faltan llenar
+    document.getElementById("valor-auto").addEventListener("blur", function () {
+        if (this.value === '') {
+            this.classList.add("required");
+        } else {
+            this.classList.remove("required");
+        }
+    });
+
+    document.getElementById("ano-auto").addEventListener("blur", function () {
+        if (this.value === '') {
+            this.classList.add("required");
+        } else {
+            this.classList.remove("required");
+        }
+    });
+    $("#borrar-datos").on("click", function () {
+        localStorage.removeItem("tablaPrestamos");
+        // Elimina la tabla de préstamos en la página
+        $("#tabla-prestamos").html("");
+    });
+
+});
+
