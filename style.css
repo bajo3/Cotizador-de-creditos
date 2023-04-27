@@ -186,26 +186,13 @@ body {
     display: none;
   }
 
-   /* Estilos para el footer */
-   footer {
-    text-align: center;
-    background-color: #222;
-    color: #eee;
-    display: flex;
-    justify-content: center;
-    padding: 10px;
-    position: fixed;
-    bottom: 0;
-    right: 0;
-    width: 100%;
-  }
-
   #tabla-prestamos {
     margin-top: 20px;
-    margin-bottom: 50px;
+    margin-bottom: 10px;
     display: flex;
     justify-content: center;
     margin: auto;
+    margin-bottom: 50px;
   }
   
   #tabla-prestamos th,
@@ -217,9 +204,26 @@ body {
   #tabla-prestamos th {
     background-color: #eee;
   }
+
+   /* Estilos para el footer */
+   footer {
+    text-align: center;
+    background-color: #222;
+    color: #eee;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    position: relative;
+    bottom: 0;
+    right: 0;
+    
+  }
+
+
   
 
   /* Estilos para el contenido del footer */
+ 
   .footer-content h3 {
     margin: 0;
   }
